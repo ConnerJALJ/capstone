@@ -1,0 +1,183 @@
+/* 0, 640px */
+/* 641px, 1024px */
+/* 1025px, 1440px */
+/* 1441px, 1920px */
+/* 1921px */
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  background-color: gray;
+  height: 100vh;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  display: -ms-grid;
+  display: grid;
+}
+
+@media only screen {
+  body {
+    -ms-grid-columns: 1fr 2px 1fr;
+        grid-template-columns: 1fr 2px 1fr;
+    -ms-grid-rows: 1.75fr 2px 1fr;
+        grid-template-rows: 1.75fr 2px 1fr;
+        grid-template-areas: "progresstracker progresstracker progresstracker" "horizontal-separator horizontal-separator horizontal-separator" "github vertical-separator mainsite";
+  }
+}
+
+@media only screen and (min-width: lower-bound(64.063em, 90em)) {
+  body {
+    -ms-grid-columns: 1fr 2px 1fr;
+        grid-template-columns: 1fr 2px 1fr;
+    -ms-grid-rows: 1fr 2px 1.75fr;
+        grid-template-rows: 1fr 2px 1.75fr;
+        grid-template-areas: "progresstracker progresstracker progresstracker" "horizontal-separator horizontal-separator horizontal-separator" "github vertical-separator mainsite";
+  }
+}
+
+#progresstracker {
+  grid-area: progresstracker;
+  -webkit-box-shadow: 0px -2px 5px #000 inset;
+          box-shadow: 0px -2px 5px #000 inset;
+  position: relative;
+}
+
+#progresstracker .card-zone {
+  overflow: hidden;
+  background-color: #fff;
+  -webkit-box-shadow: 4px -2px 5px 0px #000,-4px -2px 5px #000;
+          box-shadow: 4px -2px 5px 0px #000,-4px -2px 5px #000;
+  position: absolute;
+  height: 80%;
+  bottom: 0;
+  z-index: 2;
+}
+
+@media only screen {
+  #progresstracker .card-zone {
+    height: auto;
+    top: 2rem;
+    right: 2rem;
+    left: 2rem;
+  }
+}
+
+@media only screen and (min-width: lower-bound(64.063em, 90em)) {
+  #progresstracker .card-zone {
+    right: 5rem;
+    left: 5rem;
+  }
+}
+
+#progresstracker .extend-zone-button {
+  background-color: #fff;
+  -webkit-box-shadow: 1px 1px 5px #000,-1px 1px 5px #000;
+          box-shadow: 1px 1px 5px #000,-1px 1px 5px #000;
+  cursor: pointer;
+  position: absolute;
+  height: 2rem;
+  z-index: 2;
+}
+
+#progresstracker .extend-zone-button::before {
+  content: "";
+  height: 6px;
+  width: 100%;
+  position: absolute;
+  top: -6px;
+  background-color: inherit;
+  z-index: 3;
+}
+
+#progresstracker .extend-zone-button .indicator-arrow {
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  -webkit-transform: translate(50%, -50%);
+          transform: translate(50%, -50%);
+}
+
+@media only screen {
+  #progresstracker .extend-zone-button {
+    right: 2rem;
+    bottom: -2rem;
+    left: 2rem;
+  }
+}
+
+@media only screen and (min-width: lower-bound(64.063em, 90em)) {
+  #progresstracker .extend-zone-button {
+    right: 5rem;
+    bottom: -2rem;
+    left: 5rem;
+  }
+}
+
+#progresstracker .card time {
+  font-weight: bold;
+}
+
+#github {
+  grid-area: github;
+  background-color: #fff;
+  position: relative;
+  z-index: 0;
+}
+
+#github img {
+  position: absolute;
+  width: 50%;
+  top: 50%;
+  right: 50%;
+  -webkit-transform: translate(50%, -50%);
+          transform: translate(50%, -50%);
+}
+
+#github .cover {
+  background-color: red;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  z-index: 0;
+}
+
+#github:hover .cover {
+  background-color: rgba(255, 0, 0, 0.256);
+  position: absolute;
+  z-index: 1;
+}
+
+#mainsite {
+  grid-area: mainsite;
+  background-color: #fff;
+  position: relative;
+  z-index: 0;
+}
+
+#mainsite .cover {
+  background-color: #0040ff;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  z-index: 0;
+}
+
+#mainsite:hover .cover {
+  background-color: rgba(0, 64, 255, 0.256);
+  position: absolute;
+  z-index: 1;
+}
+
+.vertical-separator {
+  grid-area: vertical-separator;
+  background-color: #000;
+}
+
+.horizontal-separator {
+  grid-area: horizontal-separator;
+  background-color: #000;
+}
+/*# sourceMappingURL=index.css.map */

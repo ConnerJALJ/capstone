@@ -1,0 +1,50 @@
+*,
+*::before,
+*::after,
+:root {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&display=swap');
+
+html, body {
+  height: 100%;
+}
+
+body {
+  color: #252934;
+  background: #fafafa;
+  font-size: 62.5%;
+  font-family: 'Kalam', cursive;
+  overflow-x: hidden;
+}
+
+a, a:visited {
+  color: #252934;
+  font-size: 1.4rem;
+  text-decoration: none;
+  transition: 200ms;
+}
+
+a:hover, a:active {
+  color: #f300b4;
+}
+
+/* 
+  Color Scheme Options:
+    Keepers:
+      #252934 - CHARLESTON GREEN
+      #fafafa - SNOW
+    Favorites:
+      #09BC8A - CARIBBEAN GREEN
+      #69140E - UP MAROON
+    Other:
+      #6D3B47 - CATAWBA 
+      #484D6D - INDEPENDENCE
+      #B497D6 - LIGHT PASTEL PURPLE
+
+  Generator:
+    https://coolors.co/252934-fafafa-09bc8a-69140e-484d6d
+*/
