@@ -4,7 +4,7 @@ import './Menu.css';
 
 const Menu = props => {
   return (
-    <div className={`menu-container ${props.menuOpen ? 'active' : ''}`}>
+    <div id="menu-container" className={`${props.menuOpen ? 'active' : 'deactive'}`}>
       <div className="overlay" />
       <div className="menu-items">
         <ul>
@@ -21,11 +21,6 @@ const Menu = props => {
           <li>
             <a href="#projects" onClick={props.toggleMenuOpen}>
               PORTFOLIO
-            </a>
-          </li>
-          <li>
-            <a href="#contact" onClick={props.toggleMenuOpen}>
-              CONTACT
             </a>
           </li>
         </ul>

@@ -11,6 +11,7 @@ const Nav = props => {
             LaPage-Jenkins
           </p>
           <a
+            href="#menu-container"
             onClick={props.toggleMenuOpen}
             className={`menu-button ${props.menuOpen ? 'active' : ''}`}
           >

@@ -7,17 +7,30 @@
   box-sizing: border-box;
 }
 
+:root {
+  --gunmetal: #252934;
+  --gunmetal-half-transparency: #25293450;
+  --main-accent: #09BC8A;
+  --main-black: #181d23;
+  --main-white: #fafafa;
+  --main-white-one-shade-darker: #e1e1e1;
+}
+
 @import url('https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;500;700;900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+
+html {
+  scroll-behavior: smooth;
+}
 
 html, body {
   height: 100%;
 }
 
 body {
-  color: #252934;
-  background: #fafafa;
+  color: var(--gunmetal);
+  background: var(--main-white);
   font-size: 62.5%;
   /* font-family: 'Kalam', cursive; */
   /* font-family: 'Noto Sans JP', sans-serif; */
@@ -26,21 +39,23 @@ body {
 }
 
 a, a:visited {
-  color: #252934;
+  color: var(--gunmetal);
   font-size: 1.4rem;
   text-decoration: none;
   transition: 200ms;
 }
 
 a:hover, a:active {
-  color: #f300b4;
+  color: var(--main-accent);
 }
+
+
 
 /* 
   Color Scheme Options:
     Keepers:
-      #252934 - CHARLESTON GREEN
-      #fafafa - SNOW
+      #252934 - GUNMETAL
+      #fafafa - BABY POWDER
     Favorites:
       #09BC8A - CARIBBEAN GREEN
       #69140E - UP MAROON

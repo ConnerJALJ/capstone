@@ -16,9 +16,9 @@ const Header = props => {
           <span className="line">write code</span>
         </h1>
         <div className="buttons">
-          <a href="#projects">my portfolio</a>
-          <a href="#contact" className="cta">
-            get in touch
+          <a href="#about">about me</a>
+          <a href="#projects" className="cta">
+            my projects
           </a>
         </div>
       </div>

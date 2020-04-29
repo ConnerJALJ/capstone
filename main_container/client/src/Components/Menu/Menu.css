@@ -1,20 +1,14 @@
-:root {
-  --main-accent-color: #09BC8A;
-  --snow-white: #fafafa;
-  --gunmetal: #252934;
-}
-
 /***** Overlay Layer *****/
-.menu-container > .overlay,
-.menu-container.active > .overlay {
+#menu-container > .overlay,
+#menu-container.active > .overlay {
   position: absolute;
   right: 0;
   height: calc( 100vh - 120px );
   width: calc( 100vw - 120px );
-  background: #fafafa;
+  background: linear-gradient(to bottom, var(--main-black) 0%, #202736 80%);
 }
 
-.menu-container.active > .overlay {
+#menu-container.active > .overlay {
   animation: overlay-slide-in 300ms forwards 300ms;
 }
 
@@ -27,28 +21,28 @@
   }
 }
 
-.menu-container > .overlay {
+#menu-container > .overlay {
   animation: overlay-slide-out 300ms forwards;
 }
 
 @keyframes overlay-slide-out {
   from {
-    left: 0;
+    right: 0;
     width: 0;
   }
   to {
-    left: 0;
+    right: 0;
     width: calc( 100vw - 120px );
   }
 }
 
 /***** Menu Layer *****/
-.menu-container {
+#menu-container {
   position: fixed;
   height: 100vh;
   width: 100vw;
   background: #202934;
-  border: 60px solid #181d23;
+  border: 60px solid var(--main-black);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -56,8 +50,8 @@
   overflow: hidden;
 }
 
-.menu-container::before,
-.menu-container::after {
+#menu-container::before,
+#menu-container::after {
   content: '';
   position: absolute;
   width: 100%;
@@ -65,15 +59,15 @@
   z-index: -1;
 }
 
-.menu-container::before {
+#menu-container::before {
   background: url(../../Images/Stars.svg);
 }
 
-.menu-container::after {
+#menu-container::after {
   background: url(../../Images/Trees.svg) bottom repeat-x;
 }
 
-.menu-container.deactive {
+#menu-container.deactive {
   animation: fade-out 600ms forwards;
 }
 
@@ -92,7 +86,7 @@
   }
 }
 
-.menu-container.active {
+#menu-container.active {
   animation: fade-in 300ms forwards;
 }
 
@@ -108,14 +102,14 @@
 }
 
 /***** Menu Items: Animation *****/
-.menu-container ul,
-.menu-container .social {
+#menu-container ul,
+#menu-container .social {
   margin-left: -80px;
   opacity: 0;
   animation: slide-out 200ms forwards;
 }
 
-.menu-container ul {
+#menu-container ul {
   list-style-type: none !important;
   font-size: 3rem;
 }
@@ -131,8 +125,8 @@
   }
 }
 
-.menu-container.active ul,
-.menu-container.active .social {
+#menu-container.active ul,
+#menu-container.active .social {
   animation: slide-in 300ms forwards 600ms;
 }
 
@@ -148,26 +142,26 @@
 }
 
 /***** Menu Items: Hover Animation *****/
-.menu-container ul li {
+#menu-container ul li {
   border-left: .2rem solid transparent;
   transition: border-left 200ms;
 }
 
-.menu-container ul li a {
+#menu-container ul li a {
   font-size: 3rem; 
   padding-left: .5rem;
 }
 
-.menu-container ul li a::after {
+#menu-container ul li a::after {
   content: ' »';
   font-size: 2.5rem;
   color: transparent;
   transition: color 200ms;
 }
 
-.menu-container ul li a:hover::after {
+#menu-container ul li a:hover::after {
   content: ' »';
-  color: var(--main-accent-color);
+  color: var(--main-accent);
 }
 
 .social {
@@ -179,28 +173,28 @@
   padding: .2rem;
 }
 
-.menu-container a,
-.menu-container a:visited {
+#menu-container a,
+#menu-container a:visited {
   color: #fafafa;
 }
 
-.menu-container a:hover,
-.menu-container a:active {
-  color: var(--main-accent-color);
+#menu-container a:hover,
+#menu-container a:active {
+  color: var(--main-accent);
 }
 
 @media only screen and (max-width: 649px) {
-  .menu-container {
+  #menu-container {
     border: none;
   }
 
-  .menu-container > .overlay,
-  .menu-container.active > .overlay {
+  #menu-container > .overlay,
+  #menu-container.active > .overlay {
     height: 100vh;
     width: 100vw;
   }
   
-  .menu-container.active > .overlay {
+  #menu-container.active > .overlay {
     animation: overlay-slide-in 300ms forwards 300ms;
   }
   
@@ -213,7 +207,7 @@
     }
   }
   
-  .menu-container > .overlay {
+  #menu-container > .overlay {
     animation: overlay-slide-out 300ms forwards;
   }
   
