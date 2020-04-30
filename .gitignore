@@ -3,3 +3,6 @@ example
 
 # ignore log files
 *.log
+
+#ignore VSCode settings
+.vscode
