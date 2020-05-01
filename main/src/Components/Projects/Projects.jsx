@@ -21,8 +21,12 @@ const Projects = () => {
             link={null}
             repo={null}
           >
-            <small>lorem aufho ash aoh faisbgoasfh fboas hfauosfh oai faufha fausifh oh</small>
-            <p>aosiudhaos dfasoh foaysg floashfailfalsyf g;alsifvlfiyagioyf aifayilfa gfiyas f</p>
+            <small>Built using Node, CSS, and React.</small>
+            <p>
+            There isn't actually a project here, this is just an example 
+            of what could be! This being the case none of the buttons will take
+            you anywere.
+            </p>
           </Project>
         </div>
       </div>
