@@ -36,7 +36,6 @@ header .right {
   }
 }
 
-
 header .left {
   left: 1rem;
   margin: 0;
@@ -48,8 +47,7 @@ header .left {
 #nav-bar {
   background-color: #e1e1e1;
   height: 100%;
-  transition: width ease-in-out 100ms;
-  transition: background-color ease-in-out 100ms;
+  transition: width ease-in-out 100ms, background-color ease-in-out 200ms;
   width: 3.5rem;
   position: relative;
   z-index: 1;
@@ -75,8 +73,7 @@ header .left {
 
 #nav-bar li::before {
   font-size: 2rem;
-  margin-right: 12px;
-  padding-left: .75rem;
+  padding-left: .8rem;
 }
 
 #nav-bar li a {
@@ -84,12 +81,11 @@ header .left {
   font-family: 'Roboto', sans-serif;
   font-size: 1.25rem;
   font-weight: bold;
-  left: 50%;
+  left: 4rem;
   padding-top: .5rem;
   position: absolute;
-  text-align: center;
+  text-align: left;
   text-decoration: none;
-  transform: translateX(-50%);
   /* transtion out of hover state */
   transition: opacity 0ms ease-in-out;
   opacity: 0%;
