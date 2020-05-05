@@ -47,7 +47,9 @@ header .left {
 #nav-bar {
   background-color: #e1e1e1;
   height: 100%;
-  transition: width ease-in-out 100ms, background-color ease-in-out 200ms;
+  transition-duration: 100ms, 200ms;
+  transition-property: width, background-color;
+  transition-timing-function: ease-in-out;
   width: 3.5rem;
   position: relative;
   z-index: 1;
