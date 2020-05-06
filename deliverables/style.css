@@ -79,7 +79,7 @@ header .left {
 }
 
 #nav-bar li a {
-  color: #252934;
+  color: #25293400;
   font-family: 'Roboto', sans-serif;
   font-size: 1.25rem;
   font-weight: bold;
@@ -89,13 +89,19 @@ header .left {
   text-align: left;
   text-decoration: none;
   /* transtion out of hover state */
-  transition: opacity 0ms ease-in-out;
+  transition-duration: 0ms;
+  transition-property: opacity, color;
+  transition-timing-function: ease-in-out;
+  width: auto;
   opacity: 0%;
 }
 
 #nav-bar:hover li a {
+  color: #252934;
   /* transition into hover state */
-  transition: opacity 200ms ease-in-out;
+  transition-duration: 200ms;
+  transition-property: opacity, color;
+  transition-timing-function: ease-in-out;
   opacity: 100%;
 }
 
