@@ -94,6 +94,7 @@ header .left {
   transition-timing-function: ease-in-out;
   width: auto;
   opacity: 0;
+  outline: 0;
 }
 
 #nav-bar:hover li a {
