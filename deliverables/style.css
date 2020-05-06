@@ -93,7 +93,7 @@ header .left {
   transition-property: opacity, color;
   transition-timing-function: ease-in-out;
   width: auto;
-  opacity: 0%;
+  opacity: 0;
 }
 
 #nav-bar:hover li a {
@@ -102,7 +102,7 @@ header .left {
   transition-duration: 200ms;
   transition-property: opacity, color;
   transition-timing-function: ease-in-out;
-  opacity: 100%;
+  opacity: 1;
 }
 
 .deliverable {
