@@ -198,3 +198,12 @@ header .left {
 #proposal .goals li span::before {
   margin-right: 8px;
 }
+
+#writeup {
+  overflow-y: hidden;
+}
+
+#writeup embed {
+  height: 100%;
+  width: 100%;
+}
